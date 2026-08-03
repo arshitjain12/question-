@@ -1,13 +1,12 @@
-// add  number
-let arr = [5,6,9,2,8];
- function sum(arr){
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-             sum +=arr[i]
-        
-    }
-    return sum 
- }
- console.log(sum (arr));
- 
- 
+//  (orignal array revers hoga) 
+let arr = [1, 2, 3, 4, 5];
+let start = 0;
+let end = arr.length-1;
+while (start<end){
+    let temp = arr[start];
+    arr[start] = arr[end]
+    arr[end] = temp;
+    start ++
+    end--
+}
+console.log( arr);

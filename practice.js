@@ -1,10 +1,17 @@
-	// rotation by k value 
-    let arr = [1,2,3,5,9,7,6];
-	let rotation = (arr,k)=>{
-     k = k%arr.length;
-    for (let i = 0; i <k; i++) {
-       let last = arr.pop();
-       arr.unshift(last);        
-    } return arr;
-} 
-console.log(rotation(arr,3))
+//  question 15 find all zero 
+ function zero(arr){
+    let poss = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i]!==0){
+            arr[poss] =arr[i]
+            poss++
+        };
+        
+    }
+    while (poss<arr.length){
+            arr[poss] = 0
+            poss++
+    }
+    return arr
+ }
+  console.log(zero([1,2,0,6,0,4,0,2,0]))

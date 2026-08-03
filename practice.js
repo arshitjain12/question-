@@ -1,18 +1,13 @@
-// sort question acc tp max
-let arr = [3,2,5,4,6,98,75,56,44]
-function sort(arr){
+// question 8 remove duplicate
+ let arr = [3,2,5,4,7,9,9,3,2,5,41];
+ function dublicate(arr){
+    let dub = [];
     for (let i = 0; i < arr.length; i++) {
-        let minIndex = i
-        for(let j=i+1;j<arr.length;j++){
-            if(arr[j]<arr[minIndex]){
-                minIndex = j
-            }
+        if(!dub.includes(arr[i])){
+            dub.push(arr[i])
         }
-        let temp  = arr[i];
-        arr[i] = arr[minIndex];
-        arr[minIndex] = temp
-        
     }
-    return arr
-}
-console.log(sort(arr));
+    return dub
+ }
+ console.log(dublicate(arr));
+ 

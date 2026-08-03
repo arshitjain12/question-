@@ -1,13 +1,8 @@
-// question 8 remove duplicate
- let arr = [3,2,5,4,7,9,9,3,2,5,41];
- function dublicate(arr){
-    let dub = [];
-    for (let i = 0; i < arr.length; i++) {
-        if(!dub.includes(arr[i])){
-            dub.push(arr[i])
-        }
-    }
-    return dub
- }
- console.log(dublicate(arr));
- 
+// question 10 miss num 
+let arr = [1,2,3,5];
+let n = arr.length+1;
+let totalSum = (n*(n+1))/2;
+let arrReducer = arr.reduce((acc , val)=>acc+val,0)
+let value  = totalSum-arrReducer;
+console.log(value);
+                                                

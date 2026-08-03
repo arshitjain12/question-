@@ -1,17 +1,18 @@
-// largest second
+// sort question acc tp max
 let arr = [3,2,5,4,6,98,75,56,44]
-function largestSecond (arr){
-    let largest = -Infinity;
-    let secondLargest = -Infinity;
+function sort(arr){
     for (let i = 0; i < arr.length; i++) {
-        if(arr[i]>largest){
-            secondLargest = largest
-            largest = arr[i]
-        }else if (  arr[i]>secondLargest && arr[i]!==largest){
-            secondLargest = arr[i];
+        let minIndex = i
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[j]<arr[minIndex]){
+                minIndex = j
+            }
         }
+        let temp  = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp
         
     }
-    return secondLargest;
+    return arr
 }
-console.log(largestSecond(arr));
+console.log(sort(arr));
